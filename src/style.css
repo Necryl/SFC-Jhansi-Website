@@ -8,7 +8,7 @@ html {
 body {
   padding: 0%;
   margin: 0%;
-
+  /* overflow: hidden; */
   display: grid;
 }
 
@@ -19,9 +19,10 @@ body > * {
 
 #top-bar {
   display: flex;
+  padding-right: 2rem;
   gap: 1rem;
   justify-content: end;
-  /* background-color: grey; */
+  background-color: rgb(102, 174, 233);
 }
 
 #nav-bar {
@@ -35,9 +36,12 @@ body > * {
 
   display: grid;
   grid-template-columns: auto auto;
-  gap: 1rem;
-
-  height: max-content;
+  gap: min(1rem, 1vw);
+  color: rgb(28, 70, 161);
+  width: fit-content;
+  margin: 0%;
+  padding: 0%;
+  /* border: 1px solid red; */
 }
 
 #logo {
@@ -49,16 +53,38 @@ body > * {
 #title-text-wrapper {
   display: grid;
   width: max-content;
+  font-size: 1rem;
 }
 #title-text-wrapper * {
   margin: 0%;
   padding: 0%;
+  color: rgb(28, 70, 161);
+}
+#title {
+}
+#subtitle {
 }
 #navlinks {
   list-style-type: none;
-  display: flex;
+  display: grid;
+  grid-auto-flow: column;
+  width: 100%;
   flex-wrap: no-wrap;
-  gap: 1em;
+  margin: 0%;
+  padding: 0%;
+}
+
+#navlinks * {
+  min-width: max-content;
+  padding: 0.5em 1em;
+  transition: 100ms;
+}
+
+#navlinks *:hover {
+  background-color: navy;
+  color: white;
+  min-width: max-content;
+  padding: 0.5em 1em;
 }
 
 #slideshow {
@@ -116,4 +142,10 @@ body > * {
   90% {
     margin-left: 0px;
   }
+}
+
+#notice-marquee {
+  background-color: yellow;
+  height: 1lh;
+  overflow: hidden;
 }
